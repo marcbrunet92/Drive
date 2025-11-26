@@ -6,129 +6,20 @@
     <title>Document</title>
     <style>
         body {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             margin: 0;
             background: black;
             overflow: hidden;
         }
-
-        /* Navbar styles */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-bottom: 1px solid white;
-        }
-
-        .navbar-logo {
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-        }
-        .navbar-logo .img {
-          padding-left: 30px;
-          font-family: sans-serif;
-          font-weight: 600;
-          color: aqua;
-          font-size: 25px;
-        }
-
-        .navbar-menu {
-          list-style: none;
-          display: flex;
-          align-items: center;
-          margin: 0;
-          margin-right: 50px;
-        }
-        .navbar-menu li {
-          margin-left: 20px;
-          z-index: 100;
-        }
-
-        .navbar-menu li:last-child {
-            margin-right: 0;
-        }
-
-        .navbar-menu li a {
-            text-decoration: none;
-            color:aqua;
-            font-size: 1rem;
-        }
-
-        .navbar-menu li a:hover {
-            color: #aaa;
-        }
-
-        .navbar-hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-menu {
-                display: none;
-            }
-
-            .navbar-hamburger {
-                display: block;
-            }
-
-            .navbar.active .navbar-menu {
-                display: flex;
-            }
-        }
-
-/*
-        .fot {
-    color: white;
-    font-size: 13px;
-    position: fixed;
-    bottom: 0;
-    left: 78%; 
-    right: 0; 
-}
-
-.link{
-    color: aqua;
-    text-decoration: none;
-    font-size: 15px;
-}*/
-
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-      
-      <div class="navbar-hamburger">
-        &#9776;
-      </div>
-    </div>
-
-    <!--<footer><h1 class="fot">follow me for more... <br><a class="link" href="">@codewith_muhilan</a></h1></footer>-->
 
     <!-- Particle Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script>
-        // Toggle navbar menu on hamburger icon click
-        const navbar = document.querySelector('.navbar');
-        const navbarHamburger = document.querySelector('.navbar-hamburger');
-
-        navbarHamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
 
         let scene,
             camera,
@@ -138,7 +29,7 @@
             flash,
             rain,
             rainGeo,
-            rainCount = 5000; // Reduce the number of rain particles to 5000
+            rainCount = 10000; // Reduce the number of rain particles to 5000
 
         function init() {
             scene = new THREE.Scene();
