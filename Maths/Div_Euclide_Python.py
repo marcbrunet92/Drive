@@ -4,8 +4,6 @@ def division_euclidienne(a:int, b:int) -> (int, int):
     # Cas de b non strictement positif
     if b <= 0:
         raise ValueError(f"Le diviseur : {b} n'est pas strictement positif")
-    elif abs(b)>abs(a):
-        raise ValueError(f"Le diviseur est plus grand que le dividende")
     elif a == b :
         return 1, 0
     # Cas de b > 0
