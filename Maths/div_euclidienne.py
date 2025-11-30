@@ -4,8 +4,6 @@ def division_euclidienne(a:int, b:int) -> (int, int):
     # Cas de b non strictement positif
     if b <= 0:
         raise ValueError(f"Le diviseur : {b} n'est pas strictement positif")
-    elif a == b :
-        return 1, 0
     # Cas de b > 0
     else :
         # Cas de a < 0
@@ -22,7 +20,7 @@ def division_euclidienne(a:int, b:int) -> (int, int):
 
 def test():
     test_values = [-10, -5, -1, 0, 1, 5, 10]  # Valeurs de a
-    divisors = [1, 2, 3, 5, 10]               # Valeurs de b 
+    divisors = [ 1, 2, 3, 5, 10]               # Valeurs de b 
 
     for b in divisors:
         for a in test_values:
