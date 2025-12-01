@@ -19,3 +19,23 @@ pip install -U nom_package : upgrade le package
 The Cheese Shop : reference to PyPI
 a namespace is a space in which a name exist
 pip --version == pip version == pip -version
+
+
+The word internationalization is commonly shortened to I18N.
+A classic form of ASCII code uses eight bits for each sign.
+A code point is a number which makes a character. 
+UCS-4 uses 32 bits (four bytes) to store each character, and the code is just the Unicode code points' unique number
+UTF-8:
+	ascii -> 8 bit
+	non latin -> 16 bit
+	idéogrammes -> 24 bits
+BOM (Byte Order Mark) is a special combination of bits announcing the encoding used by a file's contents (e.g. UCS-4 or UTF-8).
+Python string are immutable sequences : 'str' object does not support item assignment
+in mulit lines string, the \n caracter count in the len()
+chr() -> The function takes a code point and returns its character.
+ord() -> take one caracter and return its code point
+sequence[start : stop : step] -> stop excluded
+"a".index("a") return the first occurence of the specified caracter : si le caractère n'est pas present : ValueError
+"aa".count("a")
+str.capitalize() -> transforme la premiere lettre en majuscule et met le reste en minuscule retourne le resultat, str non changé
+str.center(a, b:str) -> retourne une chaine e longueur a avec de part et d'autre de la chaine horizontale le bon nombre de b. si b trop petit, cela retourne la chaine originale
