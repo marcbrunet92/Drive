@@ -1,0 +1,21 @@
+dir(nom_d_un_module) -> toutes les possibilités de module.xxx
+pow(x, 2) -> x²
+hypot(x, y) -> la longueur de l'hypothénuse dans le cas ou les petits côtés sont x et y 
+random.seed(x:int|None) -> si x vide met la seed à la date actuelle ( secondes ), sinon à l'entier, avec une meme seed, les nombres generes ensuite seront egaux ( decimale près car clacul plus ou mins précis
+random.choice(x:list) -> retourne un element de la liste
+random.sample(x:list, n:int) -> retourne une liste de n elements pris dans x n<=len(x)
+platform.platform(aliased = False, terse=False) terse = smaller output (less precise) -> OS name
+platform.machine() -> generic processor name
+platform.processor() -> precise processor name
+platform.system() -> generic os name
+platform.version() -> OS version 
+platform.python_implementation -> donne CPython ( normalement )
+platform.python_version_tuple -> (major, minor, patch), the three composant of a version name
+__name__ = '__main__' when run it as a script
+	 = nom_module when in a module
+sys.path -> list of all the location where python look for packages. Use append() to add one. use double backslaches \\
+pip install --user nom_package : installe un package pour l'utilisateur local
+pip install -U nom_package : upgrade le package
+The Cheese Shop : reference to PyPI
+a namespace is a space in which a name exist
+pip --version == pip version == pip -version
