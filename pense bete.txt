@@ -39,3 +39,18 @@ sequence[start : stop : step] -> stop excluded
 "aa".count("a")
 str.capitalize() -> transforme la premiere lettre en majuscule et met le reste en minuscule retourne le resultat, str non changé
 str.center(a, b:str) -> retourne une chaine e longueur a avec de part et d'autre de la chaine horizontale le bon nombre de b. si b trop petit, cela retourne la chaine originale
+str.endswith()
+str.find() -> only for str, safer than index, return -1 si non trouvé
+str.isalnum() -> True si seulement des caractères alphanumérique
+str.isalpha()
+str.isdigit()
+str.islower()
+str.isspace()
+str.isupper()
+",".join(["omicron", "pi", "rho"]) -> "omicron,pi,rho"
+str.lower()
+"www.cisco.com".lstrip("w.") -> cisco.com
+str.replace(a, b, c) -> replace a by b max c times 
+str.rfind() -> search from the end of the string
+str.rstrip() -> strip from the end of the string
+str.split()
