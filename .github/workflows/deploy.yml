@@ -24,7 +24,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -p 18005 Marc@lemarc.fr << 'EOF'
           set -e
           echo "[Updating external submodule]"
-          cd /home/Marc/Developpement/Web/mon_site/app/static/drive/drive
+          cd /home/Marc/Web/mon_site/app/static/drive/drive
           git fetch --all
           git reset --hard origin/main
           EOF
