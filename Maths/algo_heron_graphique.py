@@ -3,6 +3,7 @@
 def heron_visuel(a:int, p:float=10**-9, pause:float = 0.5):
     import matplotlib.pyplot as plt
     import numpy as np
+
     x = a/2
 
     _, ax = plt.subplots(figsize=(6, 6))
@@ -10,7 +11,7 @@ def heron_visuel(a:int, p:float=10**-9, pause:float = 0.5):
     while not abs(x**2-a) < p:
         x = (x + a/x) / 2
         ax.clear()
-        x_id = np.linspace(0, a * 1.1, 100)
+        x_id = np.linspace(0, a/2, 100)
         plt.plot(x_id, x_id, label='y = x', color='lightgray')
         ax.add_patch(plt.Rectangle((0, 0), x, a/x, fill=None, edgecolor='blue', linewidth=2, label='Carré de côté a'))
         plt.grid(True)
@@ -18,4 +19,10 @@ def heron_visuel(a:int, p:float=10**-9, pause:float = 0.5):
     plt.show(block=False)
     return x
 
-print(f"Racine carrée trouvée : {heron_visuel(15)}")
+# Programme principal
+try:
+    a = int(input('Entrez un nombre pour calculer sa racine carrée: '))
+    assert a >= 0, "Le nombre doit être positif"
+    print(f"Racine carrée trouvée : {heron_visuel(a)}")
+except ValueError:
+    print("Erreur: veuillez entrer un nombre entier valide")
