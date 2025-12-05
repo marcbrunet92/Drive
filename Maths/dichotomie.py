@@ -2,7 +2,7 @@
 def f(x:float) -> float:
     return x**2 + x - 1 
 
-def dich_recursive(a:float, b:float, f, p:float, compteur:int = 0) -> (float, int):
+def dich_recursive(a:float, b:float, f, p:float, compteur:int = 0) -> tuple[float, int]:
     # algorithme récursif
     c = (a+b)/2
     if abs(a-b)<p:
