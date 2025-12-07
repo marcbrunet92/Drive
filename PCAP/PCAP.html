@@ -1248,7 +1248,7 @@ pre[class*="language-"] {
   <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
 </head>
 <body>
-  <article class="markdown-body"><h2 class="atx" id="module-1-packages-and-imports">MODULE 1: PACKAGES AND IMPORTS</h2>
+  <article class="markdown-body"><h2 class="atx" id="packages-and-imports">PACKAGES AND IMPORTS</h2>
 <p><strong>General tools</strong></p>
 <ul>
 <li><code>dir(module_name)</code> → Lists all available attributes: <code>module.xxx</code>.</li>
@@ -1433,6 +1433,145 @@ Description: Raised when an import operation fails.</p>
 <p><strong>KeyError</strong>
 Location: <code>BaseException ← Exception ← LookupError ← KeyError</code>
 Description: Raised when trying to access a dictionary key that does not exist.</p>
+<h2 class="atx" id="object-oriented-programming">OBJECT-ORIENTED PROGRAMMING</h2>
+<h3 class="atx" id="procedural-vs-object-oriented-paradigm">Procedural vs Object-Oriented Paradigm</h3>
+<ul>
+<li><p><strong>Procedural approach</strong>
+Divides the world into two separate domains:
+<em>the world of data</em> and <em>the world of code (functions)</em>.</p>
+</li>
+<li><p><strong>Object-oriented approach</strong>
+Groups data and code together into <strong>classes</strong>.
+An <strong>object</strong> is a combination of:</p>
+<ul>
+<li>a set of traits (<strong>properties / attributes</strong>)</li>
+<li>a set of behaviors (<strong>methods</strong>)</li>
+</ul>
+</li>
+</ul>
+<h3 class="atx" id="classes-objects-and-hierarchy">Classes, Objects, and Hierarchy</h3>
+<ul>
+<li><p>A <strong>class</strong> is a set of objects.</p>
+</li>
+<li><p>An <strong>object</strong> is a member (an instance) of a class.</p>
+</li>
+<li><p>A class can inherit from another class:</p>
+<ul>
+<li><strong>superclass</strong> (parent)</li>
+<li><strong>subclass</strong> (child)</li>
+</ul>
+</li>
+<li><p>The top-level class has <strong>no superclass</strong>.</p>
+</li>
+<li><p>Relations between classes are shown as arrows from <strong>subclass → superclass</strong>.</p>
+</li>
+<li><p>Creating an object is called <strong>instantiation</strong>; the created object is an <strong>instance</strong>.</p>
+</li>
+</ul>
+<h3 class="atx" id="object-attributes">Object Attributes</h3>
+<p>An object conceptually contains three groups of attributes:</p>
+<ol>
+<li><p><strong>A name</strong> that identifies it within its namespace
+(some objects may be anonymous).</p>
+</li>
+<li><p><strong>A set of individual properties</strong> that describe its unique state
+(some objects may have none).</p>
+</li>
+<li><p><strong>A set of abilities (methods)</strong> capable of:</p>
+<ul>
+<li>modifying itself</li>
+<li>interacting with other objects</li>
+</ul>
+</li>
+</ol>
+<h3 class="atx" id="encapsulation-and-private-attributes">Encapsulation and Private Attributes</h3>
+<ul>
+<li><p>Any class attribute starting with <code>__</code> becomes <strong>private</strong>.</p>
+</li>
+<li><p>It cannot be accessed directly from outside the class.</p>
+</li>
+<li><p>Python uses <strong>name mangling</strong> to store private attributes under:</p>
+<pre><code class="fenced-code-block">_ClassName__attribute</code></pre>
+<p>Example:
+<code>example_object_1._ExampleClass__first</code></p>
+</li>
+<li><p>Methods inside the class can access all properties and methods of the actual object.</p>
+</li>
+</ul>
+<h3 class="atx" id="inheritance-and-constructor-rules">Inheritance and Constructor Rules</h3>
+<ul>
+<li>Python <strong>does not automatically call</strong> the superclass constructor.</li>
+<li>You must explicitly invoke it inside <code>__init__()</code>.</li>
+</ul>
+<p>Example of calling overridden method from superclass:</p>
+<ul>
+<li><p>You must specify:</p>
+<ol>
+<li>the <strong>superclass name</strong></li>
+<li>the <strong>target object</strong> as the first argument
+(because Python does not insert <code>self</code> automatically here)</li>
+</ol>
+</li>
+</ul>
+<p>This process illustrates <strong>method overriding</strong>:
+A subclass defines a method with the same name but a different implementation.</p>
+<h3 class="atx" id="__dict__-attribute"><code>__dict__</code> Attribute</h3>
+<ul>
+<li><p>Every object stores its properties in <code>object.__dict__</code> (a dictionary).</p>
+</li>
+<li><p>Example:
+For private attribute <code>__first</code> inside class <code>ExampleClass</code>, the object stores:</p>
+<pre><code class="fenced-code-block">'_ExampleClass__first': &lt;value&gt;</code></pre>
+</li>
+</ul>
+<h3 class="atx" id="class-variables-vs-instance-variables">Class Variables vs Instance Variables</h3>
+<p>Example:</p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">class</span> <span class="token class-name">ExampleClass</span><span class="token punctuation">:</span>
+    counter <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__first <span class="token operator">=</span> val
+        ExampleClass<span class="token punctuation">.</span>counter <span class="token operator">+=</span> <span class="token number">1</span>
+
+example_object_1 <span class="token operator">=</span> ExampleClass<span class="token punctuation">(</span><span class="token punctuation">)</span>
+example_object_2 <span class="token operator">=</span> ExampleClass<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+example_object_3 <span class="token operator">=</span> ExampleClass<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span></code></pre>
+<p>Outputs:</p>
+<pre><code class="fenced-code-block">example_object_1.__dict__, example_object_1.counter → {'_ExampleClass__first': 1} 3
+example_object_2.__dict__, example_object_2.counter → {'_ExampleClass__first': 2} 3
+example_object_3.__dict__, example_object_3.counter → {'_ExampleClass__first': 4} 3</code></pre>
+<p>Key points:</p>
+<ul>
+<li><p><strong>Class variables</strong>:</p>
+<ul>
+<li>do <strong>not</strong> appear in instance <code>__dict__</code></li>
+<li>have <strong>one shared copy</strong> for all objects</li>
+<li>are stored in the <strong>class’s own <code>__dict__</code></strong></li>
+</ul>
+</li>
+<li><p><strong>Instance variables</strong>:</p>
+<ul>
+<li>exist <strong>only in objects</strong></li>
+<li>every object may have different ones</li>
+<li>may be private using <code>__name</code>
+(still accessible through name-mangled form)</li>
+</ul>
+</li>
+</ul>
+<h3 class="atx" id="checking-attributes-with-hasattr">Checking Attributes with <code>hasattr()</code></h3>
+<p>To check if an object/class contains an attribute:</p>
+<pre><code class="fenced-code-block language-python"><span class="token builtin">hasattr</span><span class="token punctuation">(</span>object_or_class<span class="token punctuation">,</span> <span class="token string">"attribute_name"</span><span class="token punctuation">)</span></code></pre>
+<ul>
+<li>The second argument must be a <strong>string</strong>.</li>
+<li>Useful to avoid <code>AttributeError</code>.</li>
+</ul>
+<h3 class="atx" id="attributeerror">AttributeError</h3>
+<ul>
+<li>Raised when attempting to access an attribute that does not exist.</li>
+</ul>
+<h3 class="atx" id="modifying-a-private-attribute-name-mangling-trick">Modifying a Private Attribute (Name-Mangling Trick)</h3>
+<p>Even private attributes are accessible if you know their mangled name:</p>
+<pre><code class="fenced-code-block language-python">version_2<span class="token punctuation">.</span>_Python__venomous <span class="token operator">=</span> <span class="token keyword">not</span> version_2<span class="token punctuation">.</span>_Python__venomous</code></pre>
+<p>This directly negates the private property <code>__venomous</code> of <code>version_2</code>.</p>
 </article>
 </body>
 </html>

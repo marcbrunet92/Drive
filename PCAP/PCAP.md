@@ -1,4 +1,4 @@
-## MODULE 1: PACKAGES AND IMPORTS
+## PACKAGES AND IMPORTS
 
 **General tools**
 
@@ -192,4 +192,157 @@ Description: Raised when an import operation fails.
 Location: `BaseException ← Exception ← LookupError ← KeyError`
 Description: Raised when trying to access a dictionary key that does not exist.
 
+## OBJECT-ORIENTED PROGRAMMING
 
+### Procedural vs Object-Oriented Paradigm
+
+* **Procedural approach**
+  Divides the world into two separate domains:
+  *the world of data* and *the world of code (functions)*.
+
+* **Object-oriented approach**
+  Groups data and code together into **classes**.
+  An **object** is a combination of:
+  
+  * a set of traits (**properties / attributes**)
+  * a set of behaviors (**methods**)
+
+### Classes, Objects, and Hierarchy
+
+* A **class** is a set of objects.
+
+* An **object** is a member (an instance) of a class.
+
+* A class can inherit from another class:
+  
+  * **superclass** (parent)
+  * **subclass** (child)
+
+* The top-level class has **no superclass**.
+
+* Relations between classes are shown as arrows from **subclass → superclass**.
+
+* Creating an object is called **instantiation**; the created object is an **instance**.
+
+### Object Attributes
+
+An object conceptually contains three groups of attributes:
+
+1. **A name** that identifies it within its namespace
+   (some objects may be anonymous).
+
+2. **A set of individual properties** that describe its unique state
+   (some objects may have none).
+
+3. **A set of abilities (methods)** capable of:
+   
+   * modifying itself
+   * interacting with other objects
+
+### Encapsulation and Private Attributes
+
+* Any class attribute starting with `__` becomes **private**.
+
+* It cannot be accessed directly from outside the class.
+
+* Python uses **name mangling** to store private attributes under:
+  
+  ```
+  _ClassName__attribute
+  ```
+  
+  Example:
+  `example_object_1._ExampleClass__first`
+
+* Methods inside the class can access all properties and methods of the actual object.
+
+### Inheritance and Constructor Rules
+
+* Python **does not automatically call** the superclass constructor.
+* You must explicitly invoke it inside `__init__()`.
+
+Example of calling overridden method from superclass:
+
+* You must specify:
+  
+  1. the **superclass name**
+  2. the **target object** as the first argument
+     (because Python does not insert `self` automatically here)
+
+This process illustrates **method overriding**:
+A subclass defines a method with the same name but a different implementation.
+
+### `__dict__` Attribute
+
+* Every object stores its properties in `object.__dict__` (a dictionary).
+
+* Example:
+  For private attribute `__first` inside class `ExampleClass`, the object stores:
+  
+  ```
+  '_ExampleClass__first': <value>
+  ```
+
+### Class Variables vs Instance Variables
+
+Example:
+
+```python
+class ExampleClass:
+    counter = 0
+    def __init__(self, val = 1):
+        self.__first = val
+        ExampleClass.counter += 1
+
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+```
+
+Outputs:
+
+```
+example_object_1.__dict__, example_object_1.counter → {'_ExampleClass__first': 1} 3
+example_object_2.__dict__, example_object_2.counter → {'_ExampleClass__first': 2} 3
+example_object_3.__dict__, example_object_3.counter → {'_ExampleClass__first': 4} 3
+```
+
+Key points:
+
+* **Class variables**:
+  
+  * do **not** appear in instance `__dict__`
+  * have **one shared copy** for all objects
+  * are stored in the **class’s own `__dict__`**
+
+* **Instance variables**:
+  
+  * exist **only in objects**
+  * every object may have different ones
+  * may be private using `__name`
+    (still accessible through name-mangled form)
+
+### Checking Attributes with `hasattr()`
+
+To check if an object/class contains an attribute:
+
+```python
+hasattr(object_or_class, "attribute_name")
+```
+
+* The second argument must be a **string**.
+* Useful to avoid `AttributeError`.
+
+### AttributeError
+
+* Raised when attempting to access an attribute that does not exist.
+
+### Modifying a Private Attribute (Name-Mangling Trick)
+
+Even private attributes are accessible if you know their mangled name:
+
+```python
+version_2._Python__venomous = not version_2._Python__venomous
+```
+
+This directly negates the private property `__venomous` of `version_2`.
