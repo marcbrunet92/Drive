@@ -1,0 +1,24 @@
+### I – Étude du montage diviseur de tension (à vide)
+#### A – Sortie sur la résistance ajustable  
+1. Pour quel domaine des valeurs de r la tension de sortie U_s varie-t-elle le plus ?  
+2. Établir l’expression de la tension U_s en fonction de U_e, R et R_p.  
+3. En déduire l’expression de la tension U_s en fonction de U_e et r.  
+4. Faire de même pour l’intensité I.  
+5. Quel est l’intérêt d’un tel montage ?  
+
+#### B – Sortie sur la résistance fixe  
+6. Pour quel domaine des valeurs de r la tension de sortie U_s varie-t-elle le plus ?  
+7. Établir l’expression de la tension U_s en fonction de U_e, R et R_p.  
+8. En déduire l’expression de la tension U_s en fonction de U_e et r.  
+9. Faire de même pour l’intensité I.  
+10. Quel est l’intérêt d’un tel montage ?  
+
+### II – Utilisation d’une photorésistance comme capteur d’éclairement  
+#### 1 – Caractéristique intensité-tension de la LDR  
+11. Que vaut la résistance de la photorésistance dans ces conditions d’éclairage ?  
+12. Montrer rapidement (3 points de mesure) que pour un éclairement plus faible, la résistance augmente. Préciser votre méthode pour obtenir un éclairement plus faible du capteur.  
+
+#### 2 – Étalonnage de la LDR  
+13. Faire varier l’éclairage sur la photorésistance à l’aide d’un dispositif que vous devrez créer à partir du matériel disponible.  
+14. Utiliser le programme "etalonnage_LDR.py" afin de tracer la courbe d’étalonnage et l’équation spécifique de conversion (remplacer dans le script les valeurs par défaut par celles mesurées).
+

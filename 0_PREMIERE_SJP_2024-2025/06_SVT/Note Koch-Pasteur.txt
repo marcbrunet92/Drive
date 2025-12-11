@@ -1,0 +1,77 @@
+Pasteur et Koch se confrontent
+
+Contexte
+- A l'époque, hypotheses de l'origine des maladies infectueuses: heredite, salubrite ou punition divine
+- Observation microscope de Pasteur et Koch : "microbes demasqués"
+- Pasteur et Koch ont une relation d'aborde de compétition puis de respect.
+
+Pasteur
+- Chimiste français
+- Etait proche de l'empereur Napoléon 3. Signe ses travaux "Haine a la prusse, vengeance, vengeance"
+- A perdu trois de ses filles
+- Moitié paralysé suite à un AVC
+- Prend sa retraite d'enseignant à 50 ans pour passer plus de temps en recherche
+   . a montré que ce sont des micro-organismes qui favorisent la fermentation
+   . a pensé que ces micro-organismes causent des maladies
+- Décéde le 05/08/1895, funérailles nationales
+
+Koch
+- Prusse, Medecin
+- a inventé la photomicrographie pour voir les microbes
+- a inventé la capture sur milieux solides: pommes de terrre (les bacteries font des colonies colorées et isolées), puis sur  gélatine, puis sur agar-agar (car la gélatine fond)
+
+Maladie du charbon : Koch s'y attelle car certains de ses patients sont éleveurs
+- L'été, des animaux enflent et meurent avec le sang noir
+- Champs maudits :  epidemies aux meme endroits
+- Observation des bacilles
+- Son maitre affirme que ces micro-organismes transmettent les maladies
+- Koch infecte des lapins pour prouver que ce sont les micro-organismes qui les font mourir
+   . Culture de bactéries dans des oeuils de boeuf
+   . Des points brillants apparaissent: "Spores". Bactéries qui sont désséché et qui survivent pendant longtemps. Explique les "champs maudits"
+   . Koch est inconnue et allemand prouve cette théorie le premier
+- Pasteur réagit en faisant une démonstration riguoureuse, par la méthode des dilutions successives
+   . Il prend une goutte d'urine infécté qu'il introduit dans un tube d'urine stérile x10 en attendant un jour a chaque fois
+   . La culture est aussi virulent que la goutte de sang de base
+   . Champs maudits: Comment les spores peuvent-ils survivre ?
+   . On enterre les betes morts dans les champs. Les verts de terre mangent les betes mortes et remontent a la surface
+				
+La vaccination
+- Le concept existe déjà (Origine du mot la "vaccine"), mais on ignore le fonctionnent. Pasteur va établir la théorie
+- Commence avec le choléra des poules, cherche une forme attenuée de la maladie (si on laisse la culture a l'air libre elle perd de sa virulance)
+- Fait un essai sur 50 moutons
+- Deux vaccins a 15 jours d'intervalle puis un mois plus tard l'injection
+	
+La peste : Koch publie un article. 
+- Mise au point de la coloration pour faciliter son observation. En effet, difficile à étudier : le charbon met 2h à se multiplier, la tuberculose met une journée
+- Koch affirme qu'une bacille est a l'origine de la tuberculose
+- Le nom de la bacille de la tuberculose devient "bacille de Koch"
+			
+Choléra : éte 1883, menace l'Europe (100k morts en France dont 18k à Paris)
+- Les allemands et les français envoient des délégations.
+- Pasteur envoie Tullier en Egypte (nid infectieux à Alexandrie), celui-ci meurt à 26 ans. Pasteur se sent coupable. Koch l'a soutenu.
+- Koch ne trouve pas la bactérie en Egypte. Continue ses recherches en Inde. Se rend compte que l'eau (utilisée pour boire et pour laver les vetements) est probablement plus contaminant que l'air
+Il reçoit un prix de 100k Reichmark
+- Le choléra arrive à Toulon. Le gvt français demande de l'aide à Koch et à Pasteur
+- Vu qu'on ne peut pas infecter les animaux, Pasteur demande a son ami l'empereur du Brésil d'infecter les condamnés à mort, mais il refuse
+	
+Rage : Pasteur s'y attaque
+- Aucune chance de survie
+- Pas beaucoup de morts par an 
+- Délai de plusieurs mois entre  morsure et  symptomes.
+- Il sait que le virus se met dans la moelle epinière
+- Atténuation de la malidie difficile, finalement en séchant la moelle epinière avec des cristaux de potasse. Pour les autres maladies, il avait laissé la bactérie qu contact de l'air
+- Vaccination 40 chiens
+- Une femme arrive d'Alsace pour vacciner son enfant. Il lui fait des injections de plus en plus virulantes et fini par lui injecter la rage. L'enfant survit
+- Réédite son exploit avec publicité. Il sauve des Russe et des Américains.
+- Création de l'institut Pasteur
+	
+Tuberculose: Koch réplique en s'y attaquant
+- 04/08/1890, congrès de médecine à Berlin, Il annonce qu'il peut vacciner et guérir.
+	Il peut rendre innofensif chez l'animal une maladie pathogène.
+- Création du Robech-loch institut.
+- Mais les résultats du professeur sont mis en doute après l'injection.	
+La tuberculine est nuisible et les malades infectés souffrent encore plus.
+- Koch est très affecté, Il divorce et en épouse une autre deux mois plus tardde 19 ans de mois que lui. C'est un scandale
+- Robert Koch vayage, Il etudie d'autres maladies. Il a l'un des premiers pris nobels de médecine
+
+Nouvelle ère: Les maladies ne sont plus definies par leur symtpomes mais par leurs causes.
